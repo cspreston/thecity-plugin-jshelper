@@ -21,7 +21,7 @@ TheCity.PluginHelper = function() {
 		}
 
 		resizeIFrame: function(subdomain, isSSL) {
-			var schema = isSSL ? "https" : "http"
+			var schema = isSSL ? "https" : "http";
 			var src = schema = '://' + subdomain + '.onthecity.org/#' + encodeURIComponent(document.location.href);
 			var documentHeight = $(document).height();
 			crossDomainPostMessage(documentHeight, src, frames[0]);
