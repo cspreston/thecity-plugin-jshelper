@@ -26,6 +26,7 @@ TheCity.PluginHelper = function() {
 			var src = schema + '://' + subdomain + '.onthecity.org/#' + encodeURIComponent(document.location.href);
 			var documentHeight = $(document).height();
 			crossDomainPostMessage(documentHeight + extra, src, frames[0]);
+            $(window).bind("resize", $.resizeIFrame(subdomain, isSSL, extra));
 		}		
 		
     };
