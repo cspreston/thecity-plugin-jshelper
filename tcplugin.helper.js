@@ -13,12 +13,12 @@ TheCity.PluginHelper = function() {
 	
     return {
 		// resize the containing IFrame to be tall enough to display all the content
-		// in the child documemnt
+		// in the child document
 		initPlugin: function(subdomain) {
 			var src = 'https://' + subdomain + '.onthecity.org/#' + encodeURIComponent(document.location.href);
 			var documentHeight = $(document).height();
 			crossDomainPostMessage(documentHeight, src, frames[0]);
-		}
+		},
 
 		resizeIFrame: function(subdomain, isSSL) {
 			var schema = isSSL ? "https" : "http";
