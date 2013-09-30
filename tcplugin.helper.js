@@ -20,11 +20,12 @@ TheCity.PluginHelper = function() {
 			crossDomainPostMessage(documentHeight, src, frames[0]);
 		},
 
-		resizeIFrame: function(subdomain, isSSL) {
+		resizeIFrame: function(subdomain, isSSL, extra) {
+            extra = typeof extra !== 'undefined' ? extra : 50;
 			var schema = isSSL ? "https" : "http";
 			var src = schema + '://' + subdomain + '.onthecity.org/#' + encodeURIComponent(document.location.href);
 			var documentHeight = $(document).height();
-			crossDomainPostMessage(documentHeight, src, frames[0]);
+			crossDomainPostMessage(documentHeight + extra, src, frames[0]);
 		}		
 		
     };
