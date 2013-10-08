@@ -13,6 +13,11 @@ TheCity.PluginHelper.resizeIFrame({
                        //(newHeight= documentHeight + extra)
   refresh: 250,        //How often to check for new documentHeight, 0 to disable,
   forceResize: false  //By default the plugin doesn't resize if the height is within
-                      //75px of the last time it was called. Set to true to override
+                      //85px of the last time it was called. Set to true to override
 });
 ```
+
+##Looping##
+The plugin tries to avoid situations where it is infinitely expanding the page but it could still happen. Just
+call the plugin with refresh: 0 to disable the automatic loops and call it manually after you've changed the
+iFrame's content.

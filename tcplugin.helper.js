@@ -26,7 +26,7 @@ TheCity.PluginHelper = function() {
             //This prevents an infinite loop where we keep expanding the iFrame size. We test for a difference of
             // > 50 because (at least on Chrome) an extra ~30 pixels are added to the height AFTER we've stored the new height
             var diff = Math.abs($(document).data('TheCity.PluginHelper.height') - height) ;
-            if ( diff < 75 && $(document).height() && !settings.forceResize) {
+            if ( diff < 85 && $(document).height() && !settings.forceResize) {
                 return;
             }
 
